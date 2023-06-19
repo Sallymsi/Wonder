@@ -21,11 +21,14 @@ security:
             form_login:
                 login_path: login
                 check_path: login
-                username_parameter: email
-                password_parameter: password
+                # username_parameter: email
+                # password_parameter: password
                 enable_csrf: true
             logout:
                 path: logout
+            login_throttling:
+                max_attempts: 3
+                interval: '5 minutes'
 
 
             # activate different ways to authenticate
