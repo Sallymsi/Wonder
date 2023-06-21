@@ -1,7 +1,7 @@
 <header class="d-flex flex-row-nowrap justify-content-center p-20">
     <div class="content flex-fill d-flex flex-row-nowrap align-items-center justify-content-between">
         <a href="{{ path('home') }}" class="header-logo">
-            <img src="{{ asset('images/logo.svg') }}" alt="logo" >
+            <img src="{{ asset('build/images/logo.svg') }}" alt="logo" >
         </a>
         <div class="header-search p-10 flex-fill">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -10,7 +10,7 @@
         {%- if is_granted('IS_AUTHENTICATED_REMEMBERED') -%}
             <div class="d-flex flow-row-nowrap justify-content-center">
                 <a href="{{ path('current_user') }}">
-                    <img src="{{ app.user.picture }}" class="avatar avatar-lg mr-10">
+                    <img src="{{ asset(app.user.picture) }}" class="avatar avatar-lg mr-10">
                 </a>
                 <small class="d-flex flex-column justify-content-center">
                     <a href="{{ path('logout') }}">Déconnexion</a>
